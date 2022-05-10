@@ -1,0 +1,39 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+- rule: tell name anytime the user ask name
+  steps:  
+  - intent: ask_name
+  - action: utter_name
+
+- rule: Answer time anytime the user ask time 
+  steps:
+  - intent: ask_time
+  - action: action_tell_time
+
+- rule: tell a jok4 anytime the user ask for a joke 
+  steps:
+  - intent: ask_joke
+  - action: action_joke
+
+- rule: say 'your are welcome' time anytime the user says thanks
+  steps:
+  - intent: appreciate
+  - action: utter_you_are_welcome
+
+- rule: reset app anytime the user says reset
+  steps:
+  - intent: reset
+  - action: action_reset_slots

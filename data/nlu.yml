@@ -1,0 +1,197 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - what's up
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - why not
+    - let's do it 
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - I don't want to
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: appreciate
+  examples: |
+    - thanks 
+    - thank you 
+    - thank you so much 
+    - appreciate your help
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_joke
+  examples: |
+    - tell me a joke 
+    - tell me something funny
+    - i want to hear a joke 
+
+- intent: tell_name
+  examples: |
+    - my name is [Mike](name)
+    - I am [Jon](name)
+    - [Alex](name)
+    - [Mary](name)
+    - [Michael](name)
+    - [Evan](name)
+
+- intent: ask_name
+  examples: |
+    - what is your name
+    - tell me your name 
+    - who are you
+    - what should i call you
+
+
+- intent: reset
+  examples: |
+    - reset chatbox
+
+- intent: look_for_restaurants
+  examples: |
+    - I'm hungry
+    - I want to find a restaurant
+    - what restaurant is around
+
+- intent: tell_location
+  examples: |
+    - I'm in [San Jose](location)
+    - I live in [New York](location)
+    - I'm in [Los Angeles](location)
+    - [Houston](location)
+
+- intent: tell_email
+  examples: |
+    - my email is [cody123@gmail.com](email)
+    - [13545234@edd.com](email) is my email
+    - [mk1997@hotmail.com](email)
+    - [mike_johnson@outlook.com](email)
+
+- intent: tell_food
+  examples: | 
+    - [Chinese](food_type)
+    - [American food](food_type)
+    - [Taco](food_type)
+    - I'm thinking about [burgers](food_type)
+    - recommand me some [noodle](food_type) places
+    - I'm craving [Mexican](food_type) food 
+
+- intent: ask_for_more_options
+  examples: | 
+    - can you show me more places
+    - can you show me more restaurants
+    - I don't see any place good
+    - please tell me more places
+    - I don't any of the restaurants
+
+- intent: ask_restaurant_detail
+  examples: | 
+    - tell me more about [Hunan Taste Restaurant](restaurant_name)
+    - tell me more about [Virrueta’s Tacos](restaurant_name)
+    - tell me more about [KFC](restaurant_name)
+    - can you tell me more about [Spartan Taco Truck](restaurant_name)
+    - I would like to know more about [Tacos A La Parrilla](restaurant_name)
+
+
+- intent: ask_restaurant_location
+  examples: | 
+    - tell me the location of the restaurant
+    - tell me the location of the place
+    - route me to the restaurant
+
+- intent: ask_time
+  examples: | 
+    - tell me the time
+    - what time is it 
+    - what is the time now
+
+- intent: tell_id
+  examples: | 
+    - my id is [1](id)
+    - [32](id) is my id
+    - [45](id)
+

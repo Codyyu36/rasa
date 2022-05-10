@@ -1,0 +1,135 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+# - story: ask name 1
+#  steps:  
+#  - intent: tell_name
+#  - action: utter_name
+#  - action: utter_ask_phone_number
+#  - intent: tell_phone_number
+#    entities:
+#    - number: "123523534"
+#  - action: utter_thanks
+
+
+- story: find restaurants 3
+  steps:
+  - intent: look_for_restaurants
+  - action: utter_ask_location
+  - intent: tell_location
+    entities:
+    - location: "San Francisco"
+  - action: utter_ask_food
+  - intent: tell_food
+    entities:
+    - food_type: "Taco"
+  - action: action_check_restaurants
+  - intent: ask_restaurant_detail
+    entities:
+    - restaurant_name: "Virrueta’s Tacos"
+  - action: action_restaurant_detail
+  - action: utter_ask_send_email
+  - intent: affirm
+  - action: action_ask_if_email
+  - intent: tell_name
+    entities:
+    - name: "Jon"
+  - action: utter_ask_email2
+  - intent: tell_email
+    entities: 
+    - email: "qwerrty32@gmail.com"
+  - action: action_save_id
+  - action: action_send_email
+  - action: utter_thanks
+
+- story: find restaurants 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: look_for_restaurants
+  - action: utter_ask_location
+  - intent: tell_location
+    entities:
+    - location: "San Francisco"
+  - action: utter_ask_food
+  - intent: tell_food
+    entities:
+    - food_type: "Taco"
+  - action: action_check_restaurants
+  - intent: ask_restaurant_detail
+    entities:
+    - restaurant_name: "Virrueta’s Tacos"
+  - action: action_restaurant_detail
+  - action: utter_ask_send_email
+  - intent: affirm
+  - action: action_ask_if_email
+  - intent: tell_name
+    entities:
+    - name: "Jon"
+  - action: utter_ask_email2
+  - intent: tell_email
+    entities: 
+    - email: "qwerrty32@gmail.com"
+  - action: action_save_id
+  - action: action_send_email
+  - action: utter_thanks
+
+- story: find restaurants 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: look_for_restaurants
+  - action: utter_ask_location
+  - intent: tell_location
+    entities:
+    - location: "San Francisco"
+  - action: utter_ask_food
+  - intent: tell_food
+    entities:
+    - food_type: "Taco"
+  - action: action_check_restaurants
+  - intent: ask_restaurant_detail
+    entities:
+    - restaurant_name: "Virrueta’s Tacos"
+  - action: action_restaurant_detail
+  - action: utter_ask_send_email
+  - intent: deny
+  - action: utter_thanks
+
+
+- story: Save id 
+  steps:
+  - intent: tell_id
+    entities:
+    - id : "1"
+  - action: action_welcome_user
+
+
