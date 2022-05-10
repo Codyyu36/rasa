@@ -63,6 +63,9 @@ Recommended story line:
   - action: utter_thanks
 
 
+BUGS:
+Try to follow the stoylines. restarting the shell/run service is the best way when encounter bugs.
+
 
 * Below is the env that was tested working. You can check if there is any package missing.
 pip freeze list:
