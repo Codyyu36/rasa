@@ -1,5 +1,7 @@
 # rasa 3.1 is used
 
+CMPE252, Xichang Yu
+
 1. install rasa.
 https://rasa.com/docs/rasa/installation/
 
