@@ -1,0 +1,26 @@
+
+curl -X POST -H "Authorization: Bearer zw1OcEcPG3dMWMlplhjQYfcHmo8QHpOaz6gEgoh4J2Ty9d4dSJV0_X5XGE8Bpv3BJUpPUsz9EfolmSDuzjQvSEgy4jKR-6_5FMxwnXI35MSU2zrOCvIUmUIr9AZrYnYx" -H "Content-Type: application/graphql" https://api.yelp.com/v3/graphql --data '
+{
+    business(id: "garaje-san-francisco") {
+        name
+        id
+        alias
+        rating
+        url
+    }
+}'
+
+
+  utter_ask_email:
+  - text: "what is your email address?"
+
+  utter_ask_send_email:
+  - text: "do you want me to send the restaurant location to your email?"
+
+  - story: email 1
+  steps:
+  - intent: utter_ask_email
+  - action: action_ask_if_email
+  - intent: tell_email
+  - action: action_send_email
+  - action: utter_thanks
